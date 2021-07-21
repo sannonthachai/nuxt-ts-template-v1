@@ -1,0 +1,7 @@
+image:
+    repository: "gcr.io/finnomena-staging/bitbucket_finnomena_finno-privatefund-external-web:latest"
+configmap:
+    PORT: 3000
+    BASE_URL: http://localhost:3000/beprivatefund
+    APP_NAME: BePrivateFundExternal
+    FINNO_PRIVATEFUND_SERVICE_URL: http://finno-privatefund-service

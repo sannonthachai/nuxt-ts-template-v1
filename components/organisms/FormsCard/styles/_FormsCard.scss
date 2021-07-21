@@ -1,0 +1,34 @@
+.v-card {
+	&__text {
+        &--topic {
+            color: #999999;
+        }
+        &--email {
+            font-size: 20px;
+            font-weight: bold;
+            color: #444444;
+        }
+        &--error-message {
+            color: #999999;
+        }
+    }
+    &__actions {
+        &--container {
+            padding-bottom: 24px;
+        }
+		&--button {
+            margin: auto;
+            padding: 0 20px !important;
+            text-transform: none !important;
+        }
+	}
+}
+
+::v-deep .v-text-field__details {
+    padding: 0 !important;
+}
+
+::v-deep .v-messages__message{
+    font-size: 14px;
+    line-height: 22px !important;
+}

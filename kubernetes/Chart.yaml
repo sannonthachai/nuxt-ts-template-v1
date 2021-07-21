@@ -1,0 +1,6 @@
+apiVersion: v2
+name: finno-privatefund-external-web
+version: 1.0.0
+appVersion: 0.0.1
+type: application
+description: A Helm chart for finno-privatefund-external-web

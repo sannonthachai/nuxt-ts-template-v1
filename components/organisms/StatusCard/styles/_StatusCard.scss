@@ -1,0 +1,16 @@
+.v-card {
+	&__text {
+		&--container {
+            height: 400px;
+        }
+        &--topic {
+            font-size: 20px;
+            color: #444444;
+            font-weight: bold;
+        }
+        &--icon {
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    }
+}
