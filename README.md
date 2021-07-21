@@ -1,4 +1,4 @@
-# finno-privatefund-external-web
+# nuxt-ts-template-v1
 
 ## Build Setup
 
