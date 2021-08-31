@@ -1,0 +1,24 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--color-primary);
+  color: var(--color-info);
+  font-family: "DBHeaventRez", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+button{
+  font-family: "DBHeaventRez", sans-serif;
+}
+
+body {
+  margin: 0;
+}

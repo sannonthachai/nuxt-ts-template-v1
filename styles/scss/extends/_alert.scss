@@ -1,0 +1,15 @@
+%alert {
+  @extend %row-flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+  border: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 16px;
+  & i {
+    vertical-align: middle;
+  }
+}

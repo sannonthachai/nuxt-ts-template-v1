@@ -1,0 +1,31 @@
+// breakpoing config
+$breakpoint-mobile: 480px;
+$breakpoint-phablet: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop-s: 1200px;
+$breakpoint-desktop-l: 1400px;
+
+// spacing
+$spacing-ss: 4px;
+$spacing-s: 8px;
+$spacing-m: 16px;
+$spacing-l: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+$spacing-3xl: 64px;
+
+// font color
+$color-primary: #f7a501;
+$color-primary-accent: #ffcd00;
+
+// color by status
+$color-success: #17c161;
+$color-success-accent: rgba(23, 193, 97, 0.2);
+$color-error: #da1616;
+$color-error-accent: rgba(218, 22, 22, 0.2);
+$color-warning: #f7a501;
+$color-warning-accent: rgba(255, 205, 0, 0.2);
+$color-inactive: #999999;
+$color-inactive-accent: #e4e8ea;
+$color-btn: #efefef;
+$color-btn-accent: #d1d1d1;

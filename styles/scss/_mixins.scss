@@ -1,0 +1,87 @@
+@mixin responsive($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $breakpoint-mobile - 1) {
+      @content;
+    }
+  } @else if $media == phablet {
+    @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-phablet - 1) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $breakpoint-phablet) and (max-width: $breakpoint-tablet - 1) {
+      @content;
+    }
+  } @else if $media == desktop-s {
+    @media only screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop-s - 1) {
+      @content;
+    }
+  } @else if $media == desktop-l {
+    @media only screen and (min-width: $breakpoint-desktop-s) {
+      @content;
+    }
+  }
+}
+
+@mixin multipleResponsive($medias...) {
+  @each $media in $medias {
+    @include responsive($media) {
+      @content;
+    }
+  }
+}
+
+@mixin finCol($col, $sum, $gap: 15px, $align: top, $first: false, $last: false) {
+  width: percentage($col/$sum);
+  display: inline-block;
+  vertical-align: $align;
+  box-sizing: border-box;
+  padding-left: if($first, 0, $gap);
+  padding-right: if($last, 0, $gap);
+}
+
+@mixin defineColorHSL($color, $hue, $saturation, $lightness){
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");#{$color}-h: #{$hue};#{$color}-s: #{$saturation};#{$color}-l: #{$lightness};
+}
+
+@mixin finRippleBtn($backgroundColor, $fontColor, $activeColor) {
+  background-color: $backgroundColor;
+  color: $fontColor;
+  transition: background 0.8s;
+  background-position: center;
+
+  &:hover {
+    background: $backgroundColor
+      radial-gradient(circle, transparent 1%, $backgroundColor 1%) center/15000%;
+  }
+  &:active {
+    background-color: $activeColor;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+// @function alpha($color, $opacity){
+//   $color: str-replace($color, 'var(');
+//   $color: str-replace($color, ')');
+//   $color-h: var(#{$color+'-h'});
+//   $color-s: var(#{$color+'-s'});
+//   $color-l: var(#{$color+'-l'});
+//   @return hsla($color-h, $color-s, $color-l, $opacity);
+// }
+
+// @function lightness($color, $lightnessMultiplier){
+//   $color: str-replace($color, 'var(');
+//   $color: str-replace($color, ')');
+//   $color-h: var(#{$color+'-h'});
+//   $color-s: var(#{$color+'-s'});
+//   $color-l: var(#{$color+'-l'});
+//   @return hsl($color-h, $color-s, calc(#{$color-l} * #{$lightnessMultiplier}));
+// }
+
+// @function str-replace($string, $search, $replace: '') {
+//   $index: str-index($string, $search);
+//   @if $index {
+//     @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+//   }
+//   @return $string;
+// }

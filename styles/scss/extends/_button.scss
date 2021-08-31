@@ -1,0 +1,16 @@
+%btn {
+  @extend %row-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  & i {
+    vertical-align: middle;
+  }
+}
+

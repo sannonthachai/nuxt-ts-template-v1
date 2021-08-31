@@ -1,0 +1,29 @@
+%font-size-xs {
+  @include responsive(mobile) {
+    font-size: 10px;
+  }
+}
+
+%font-size-s {
+  @include responsive(mobile) {
+    font-size: 12px;
+  }
+}
+
+%font-size-m {
+  @include responsive(mobile) {
+    font-size: 14px;
+  }
+}
+
+%font-size-l {
+  @include responsive(mobile) {
+    font-size: 18px;
+  }
+}
+
+%font-size-xl {
+  @include responsive(mobile) {
+    font-size: 20px;
+  }
+}
